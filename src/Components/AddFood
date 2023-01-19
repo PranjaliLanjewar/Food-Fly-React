@@ -1,0 +1,48 @@
+import React,{ Fragment, useEffect, useState} from "react";
+import { Button, Container, Form,FormGroup, Input } from "reactstrap";
+
+const AddCourse=()=>{
+    useEffect(()=>{
+        document.title="Add Food || Learn Code with Trupti"
+    },[]);
+
+    return(
+        <div>
+            <Fragment>
+                <h1>Fill Details of Food</h1>
+                <form>
+                <FormGroup>
+                        <label for="FoodId"> Food Id</label>
+                        <Input 
+                                Type="Text"
+                                placeholder="Enter Food Id Here"
+                                name="FoodId"
+                                Id="FoodId">
+                        </Input>   
+                    </FormGroup>
+                    <FormGroup>
+                        <label for="title">Food Title</label>
+                        <Input
+                                Type="text"
+                                placeholder="Enter Food Title here"
+                                name="title"
+                                Id="title">
+                        </Input>
+                    </FormGroup>
+
+            
+                    <FormGroup>
+                        <Container className="text-center">
+                            <Button type="submit" color="success"> Add Food</Button>{' '}
+                            <Button type="reset" color="warning ml-2"> Clear </Button>
+                        </Container>
+                    </FormGroup>
+                </form>
+            </Fragment>
+        </div>
+
+    );
+};
+export default AddFood;
+
+
